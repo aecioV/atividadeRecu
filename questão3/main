@@ -1,0 +1,17 @@
+public class BugTester {
+    public static void main(String[] args) {
+        Bug bug = new Bug(0);
+
+        System.out.println("Posição inicial: " + bug.getPosicao()); 
+
+        bug.move();
+        System.out.println("Posição após o primeiro movimento: " + bug.getPosicao());
+
+        bug.vira();
+        bug.move();
+        System.out.println("Posição após virar e mover: " + bug.getPosicao());  
+
+        bug.move();
+        System.out.println("Posição após o segundo movimento: " + bug.getPosicao());  
+    }
+}

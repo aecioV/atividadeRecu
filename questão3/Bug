@@ -1,0 +1,25 @@
+public class Bug {
+    private int posicao;
+    private boolean direcaoDireita;
+
+    public Bug(int posicaoInicial) {
+        this.posicao = posicaoInicial;
+        this.direcaoDireita = true;
+    }
+
+    public void vira() {
+        direcaoDireita = !direcaoDireita;
+    }
+
+    public void move() {
+        if (direcaoDireita) {
+            posicao++;
+        } else {
+            posicao--;
+        }
+    }
+
+    public int getPosicao() {
+        return posicao;
+    }
+}

@@ -1,0 +1,44 @@
+public class Aluno {
+    private String nome;
+    private int numeroIdentificacao;
+    private double media;
+
+    public Aluno(String nome, int numeroIdentificacao, double media) {
+        this.nome = nome;
+        this.numeroIdentificacao = numeroIdentificacao;
+        this.media = media;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getNumeroIdentificacao() {
+        return numeroIdentificacao;
+    }
+
+    public double getMedia() {
+        return media;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setNumeroIdentificacao(int numeroIdentificacao) {
+        this.numeroIdentificacao = numeroIdentificacao;
+    }
+
+    public void setMedia(double media) {
+        this.media = media;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", numeroIdentificacao=" + numeroIdentificacao +
+                ", media=" + media +
+                '}';
+    }
+}

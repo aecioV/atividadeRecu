@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+       
+        Aluno aluno = new Aluno("João", 12345, 8.5);
+        System.out.println(aluno.getNome());  
+        System.out.println(aluno.getNumeroIdentificacao());  
+        System.out.println(aluno.getMedia());  
+        aluno.setNome("Maria");
+        aluno.setNumeroIdentificacao(67890);
+        aluno.setMedia(9.2);
+
+        System.out.println(aluno.getNome());  
+        System.out.println(aluno.getNumeroIdentificacao());  
+        System.out.println(aluno.getMedia());  
+
+        System.out.println(aluno.toString()); 
+    }
+}

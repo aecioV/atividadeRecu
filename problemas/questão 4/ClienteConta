@@ -1,0 +1,16 @@
+public class ClienteConta {
+    public static void main(String[] args) {
+        Conta conta = new Conta("Aécio", 100.0);
+        System.out.println("Saldo inicial: " + conta.getSaldo());
+
+        Cartao cartao = new Cartao(conta, "1234");
+        boolean saqueEfetuado = cartao.saca("1234", 80.0);
+        if (saqueEfetuado) {
+            System.out.println("Saque realizado com sucesso!");
+        } else {
+            System.out.println("Senha incorreta ou saldo insuficiente!");
+        }
+
+        System.out.println("Saldo atual: " + conta.getSaldo());
+    }
+}

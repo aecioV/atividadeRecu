@@ -1,0 +1,52 @@
+public class Aluno {
+    private String nome;
+    private int identificacao;
+    private double[] notas;
+
+    public Aluno(String nome, int identificacao, double[] notas) {
+        this.nome = nome;
+        this.identificacao = identificacao;
+        this.notas = notas;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getIdentificacao() {
+        return identificacao;
+    }
+
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setIdentificacao(int identificacao) {
+        this.identificacao = identificacao;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
+
+    public double calcularMedia() {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
+    }
+
+    public boolean estaAprovado() {
+        double media = calcularMedia();
+        return media >= 7.0;
+    }
+
+    public String toString() {
+        return "Aluno [nome=" + nome + ", identificacao=" + identificacao + ", notas=" + Arrays.toString(notas) + "]";
+    }
+}

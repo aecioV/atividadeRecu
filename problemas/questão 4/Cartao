@@ -1,0 +1,17 @@
+public class Cartao {
+    private Conta conta;
+    private String senha;
+
+    public Cartao(Conta conta, String senha) {
+        this.conta = conta;
+        this.senha = senha;
+    }
+
+    public boolean saca(String senha, double valor) {
+        if (this.senha.equals(senha)) {
+            return conta.saca(valor);
+        } else {
+            return false;
+        }
+    }
+}
